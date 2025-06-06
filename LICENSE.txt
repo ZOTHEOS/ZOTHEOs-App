@@ -1,0 +1,51 @@
+ZOTHEOS: Ethical Fusion AI for Synthesized Intelligence
+Copyright (c) 2025, ZOTHEOS LLC — Created by David Alanzo Garcia
+
+This software, ZOTHEOS, is a composite work. The original fusion logic, orchestration architecture, user interface design, memory system, and other unique components developed specifically for ZOTHEOS are the intellectual property of David Alanzo Garcia / ZOTHEOS LLC and are protected by copyright.
+
+ZOTHEOS incorporates and relies upon several open-source models and technologies, each governed by its own respective license. Use and distribution of these components must comply with their individual licenses. Key open-source components include:
+
+MODELS:
+• Qwen Model Series (e.g., Qwen1.5-7B-Chat-GGUF):
+  - Licensed under the Tongyi Qianwen LICENSE (Apache 2.0 based).
+  - Copyright (c) Alibaba Cloud.
+  - Full license details: https://github.com/QwenLM/Qwen/blob/main/Tongyi%20Qianwen%20LICENSE%20AGREEMENT
+  - Note: Specific model versions may have variations; users should verify the license for the exact model file used.
+
+• Mistral Model Series (e.g., Mistral-7B-Instruct-v0.2.Q5_K_M.gguf):
+  - Licensed under the Apache 2.0 License.
+  - Copyright (c) Mistral AI.
+  - Full license details: https://www.apache.org/licenses/LICENSE-2.0
+
+• Gemma Model Series (e.g., gemma-7b-it-Q5_K_M.gguf):
+  - Licensed under the Gemma Tems of Use (typically permissive, similar to Apache 2.0 for many uses but with specific conditions).
+  - Copyright (c) Google LLC.
+  - Users must review and agree to the Gemma Terms of Use available at ai.google.dev/gemma/terms.
+
+LIBRARIES & FRAMEWORKS:
+• llama-cpp-python:
+  - Licensed under the MIT License.
+  - Copyright (c) 2023 Andrei CC & The llama-cpp-python Authors.
+  - Full license details: https://github.com/abetlen/llama-cpp-python/blob/main/LICENSE
+
+• Gradio:
+  - Licensed under the Apache 2.0 License.
+  - Copyright (c. 2019) Gradio Team.
+  - Full license details: https://github.com/gradio-app/gradio/blob/main/LICENSE
+
+• Python and its standard libraries:
+  - Python is available under the Python Software Foundation License (PSFL), which is GPL-compatible.
+
+REQUIREMENTS FOR DISTRIBUTION:
+Distribution of ZOTHEOS or any derivative works must:
+1. Include this `LICENSE.txt` file in its entirety.
+2. Clearly attribute the source of the open-source models and libraries as listed above.
+3. Comply with all individual licenses of the incorporated components.
+4. Retain the copyright notice for the original ZOTHEOS components.
+
+DISCLAIMER:
+This software is provided "as-is", without warranty of any kind, express or implied. The authors and copyright holders are not liable for any claim, damages, or other liability arising from the use of this software.
+
+By using, modifying, or distributing ZOTHEOS, you agree to the terms outlined herein and the respective licenses of all incorporated components.
+
+For inquiries, please contact: [Your Contact Email or ZOTHEOS LLC Contact Info]
