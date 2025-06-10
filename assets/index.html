@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZOTHEOS | Ethical Fusion AI</title>
+  <link rel="icon" type="image/png" href="favicon_blackBG.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: 'Lato', sans-serif;
+      background: radial-gradient(ellipse at bottom, #0a0a15 0%, #050510 70%, #000000 100%);
+      color: #f0f0f5;
+      overflow: hidden;
+    }
+
+    #intro-video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    #intro-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #skip-text {
+      position: absolute;
+      bottom: 30px;
+      color: #aaa;
+      font-size: 0.85rem;
+      font-style: italic;
+      animation: fadeIn 3s ease-in-out forwards;
+    }
+
+    #main-content {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100vh;
+    }
+
+    #main-content.show {
+      display: flex;
+      animation: fadeInSlow 1.2s ease forwards;
+    }
+
+    #gradio-app {
+      width: 100%;
+      height: 100vh;
+      border: none;
+      opacity: 0;
+      transition: opacity 1.5s ease;
+    }
+
+    #main-content.show #gradio-app {
+      opacity: 1;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInSlow {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      #skip-text {
+        font-size: 0.75rem;
+        bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Fullscreen Intro Video -->
+  <div id="intro-video-container">
+    <video id="intro-video" autoplay muted playsinline>
+      <source src="zotheos_intro.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div id="skip-text">Click or tap to skip</div>
+  </div>
+
+  <!-- ✅ Main App Embedded -->
+  <div id="main-content">
+    <iframe id="gradio-app" src="https://huggingface.co/spaces/ZOTHEOS/ZOTHEOS-App"></iframe>
+  </div>
+
+  <script>
+    const video = document.getElementById('intro-video');
+    const introContainer = document.getElementById('intro-video-container');
+    const mainContent = document.getElementById('main-content');
+
+    function launchZotheosApp() {
+      introContainer.style.display = 'none';
+      mainContent.classList.add('show');
+    }
+
+    video.addEventListener('ended', launchZotheosApp);
+    introContainer.addEventListener('click', launchZotheosApp); // Click-to-skip
+  </script>
+
+</body>
+</html>
